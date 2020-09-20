@@ -54,8 +54,30 @@ class newsletter_subscriber_widget extends WP_Widget {
 		// Outputs the options form on admin
 		$title = !empty($instance['title']) ? $instance['title'] : __('Newsletter Subscriber', 'nsw_domain');
 		$recipient = $instance['recipient'];
-		$recipient = $instance['subject'];
+		$subject = !empty($instance['subject']) ? $instance['subscriber'] : __('You have a new subscriber', 'nsw_domain');
 		//$this->getForm( $instance);
+		?>
+		<p>
+			<lable for="<?php echo $this->get_field_id('title')?>">
+				<?php _e('Title:') ?>
+			</lable><br>
+			<input type="text" id="<?php echo $this->get_field_id('title')?>"name="<?php echo $this->get_field_name('title')?>" value = "<?php echo esc_attr($title);?>"/>
+		</p>
+
+		<p>
+			<lable for="<?php echo $this->get_field_id('recipient')?>">
+				<?php _e('Recipient:') ?>
+			</lable><br>
+			<input type="text" id="<?php echo $this->get_field_id('recipient')?>"name="<?php echo $this->get_field_name('recipient')?>" value = "<?php echo esc_attr($recipient);?>"/>
+		</p>
+
+		<p>
+			<lable for="<?php echo $this->get_field_id('subject')?>">
+				<?php _e('Subject:') ?>
+			</lable><br>
+			<input type="text" id="<?php echo $this->get_field_id('subject')?>"name="<?php echo $this->get_field_name('subject')?>" value = "<?php echo esc_attr($subject);?>"/>
+		</p>
+		<?php
 	}
 
 	/**
