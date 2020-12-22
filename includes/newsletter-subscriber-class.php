@@ -30,7 +30,7 @@ class newsletter_subscriber_widget extends WP_Widget {
 		
 		?>
 			<div id = "form-msg" ></div>
-			<form id = "subscriber-form" method = "post" action = "<?php plugins_url().'/newsletter-subscriber-widget/includes/newsletter-subscriber-mailer.php'?>">
+			<form id = "subscriber-form" method = "post" action = "<?php echo plugins_url();?>/newsletter-subscriber-widget/includes/newsletter-subscriber-mailer.php">
 				<div class = "form-group">
 					<lable for = "name" >Name: </lable> <br/>
 					<input type = "text" id = "name" class = "form-control" name = "name" required>
