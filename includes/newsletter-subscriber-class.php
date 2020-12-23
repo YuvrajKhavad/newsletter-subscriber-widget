@@ -27,7 +27,7 @@ class newsletter_subscriber_widget extends WP_Widget {
 			echo $instance['title'];
 		}
 		echo $args['after_title'];
-		
+
 		?>
 			<div id = "form-msg" ></div>
 			<form id = "subscriber-form" method = "post" action = "<?php echo plugins_url();?>/newsletter-subscriber-widget/includes/newsletter-subscriber-mailer.php">

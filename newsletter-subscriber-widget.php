@@ -12,6 +12,15 @@ if(!defined('ABSPATH'))
     exit;
 }
 
+/**
+ * Define Constants
+ */
+define('PLUGIN_PATH', plugin_dir_path(__FILE__).'/');
+define('INCLUDES', INCLUDES .'includes/');
+
+define('PLUGIN_URL', plugins_url().'"/newsletter-subscriber-widget/"');
+define('URL_INCLUDES', plugins_url().'includes/');
+
 // Load scripts
 require_once(plugin_dir_path(__FILE__). '/includes/newsletter-subscriber-scripts.php');
 

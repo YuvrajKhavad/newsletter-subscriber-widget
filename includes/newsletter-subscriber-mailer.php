@@ -1,4 +1,4 @@
-<?php 
+<?php
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         // get post data
@@ -34,7 +34,7 @@
         else
         {
             http_response_code(500);
-            echo "There was a problem";    
+            echo "There was a problem";
         }
     }
     else
