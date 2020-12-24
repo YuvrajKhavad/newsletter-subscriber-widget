@@ -16,7 +16,7 @@ if(!defined('ABSPATH'))
  * Define Constants
  */
 define('PLUGIN_PATH', plugin_dir_path(__FILE__).'/');
-define('INCLUDES', INCLUDES .'includes/');
+define('INCLUDES', PLUGIN_PATH .'includes/');
 
 define('PLUGIN_URL', plugins_url().'"/newsletter-subscriber-widget/"');
 define('URL_INCLUDES', plugins_url().'includes/');
