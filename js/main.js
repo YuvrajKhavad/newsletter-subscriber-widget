@@ -5,6 +5,7 @@ jQuery(document).ready(function($)
     {
         e.preventDefault();
         
+        alert("HHHH");
         // form data
         var subscriber_data = form.serialize();
         

@@ -18,14 +18,16 @@ if(!defined('ABSPATH'))
 define('PLUGIN_PATH', plugin_dir_path(__FILE__).'/');
 define('INCLUDES', PLUGIN_PATH .'includes/');
 
-define('PLUGIN_URL', plugins_url().'"/newsletter-subscriber-widget/"');
-define('URL_INCLUDES', plugins_url().'includes/');
+define('PLUGIN_URL', plugins_url().'/newsletter-subscriber-widget/');
+define('URL_INCLUDES', PLUGIN_URL.'includes/');
+define('PLUGIN_JS', URL_INCLUDES.'js/');
+define('PLUGIN_CSS', URL_INCLUDES.'css/');
 
 // Load scripts
-require_once(plugin_dir_path(__FILE__). '/includes/newsletter-subscriber-scripts.php');
+require_once(INCLUDES. 'newsletter-subscriber-scripts.php');
 
 // Load Class
-require_once(plugin_dir_path(__FILE__). '/includes/newsletter-subscriber-class.php');
+require_once(INCLUDES. 'newsletter-subscriber-class.php');
 
 // Register Widget
 function register_newsletter_subscriber()

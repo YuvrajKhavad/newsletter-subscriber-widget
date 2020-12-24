@@ -30,7 +30,7 @@ class newsletter_subscriber_widget extends WP_Widget {
 
 		?>
 			<div id = "form-msg" ></div>
-			<form id = "subscriber-form" method = "post" action = "<?php echo plugins_url();?>/newsletter-subscriber-widget/includes/newsletter-subscriber-mailer.php">
+			<form id = "subscriber-form" method = "post" action = "<?php echo URL_INCLUDES;?>newsletter-subscriber-mailer.php">
 				<div class = "form-group">
 					<lable for = "name" >Name: </lable> <br/>
 					<input type = "text" id = "name" class = "form-control" name = "name" required>
@@ -82,6 +82,7 @@ class newsletter_subscriber_widget extends WP_Widget {
 			</lable><br>
 			<input type="text" id="<?php echo $this->get_field_id('subject')?>" name="<?php echo $this->get_field_name('subject')?>" value = "<?php echo esc_attr($subject);?>"/>
 		</p>
+
 		<?php
 	}
 
@@ -91,14 +92,14 @@ class newsletter_subscriber_widget extends WP_Widget {
 	 * @param array $new_instance The new options
 	 * @param array $old_instance The previous options
 	 */
-	public function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) 
+	{
 		// processes widget options to be saved
 		$instance = array(
 			'title' => (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '',
 			'recipient' => (!empty($new_instance['recipient'])) ? strip_tags($new_instance['recipient']) : '',
 			'subject' => (!empty($new_instance['subject'])) ? strip_tags($new_instance['subject']) : '',
 		);
-
 		return $instance;
 	}
 }
